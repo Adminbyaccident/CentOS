@@ -100,6 +100,11 @@ systemctl start clamonacc.service
 
 # Final install messages
 echo '
+
+#################################
+###### Install message ##########
+#################################
+
 Check the Clamav processes with the following command:
 
 ps -ef | grep clam
