@@ -40,7 +40,7 @@ sed -i 's/scanner (%i) daemon/scanner daemon/g' /usr/lib/systemd/system/clamd@.s
 sed -i 's/\/etc\/clamd.d\/%i.conf/\/etc\/clamd.d\/scan.conf/g' /usr/lib/systemd/system/clamd@.service
 
 # Enable the Clamd service
-systemctl enable clamd@service
+systemctl enable clamd@.service
 
 # Start the Clamd service
 systemctl start clamd@scan
