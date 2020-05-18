@@ -35,6 +35,10 @@ systemctl start clamav-freshclam.service
 # Update Clamav Signatures using Freshclam
 freshclam
 
+# Tune the Systemd entry for Clamd
+sed -i 's/scanner (%i) daemon/scanner daemon/g' /usr/lib/systemd/system/clamd@.service
+sed -i 's/\/etc\/clamd.d\/%i.conf/\/etc\/clamd.d\/scan.conf/g' /usr/lib/systemd/system/clamd@.service
+
 # Enable the Clamd service
 systemctl enable clamd@service
 
