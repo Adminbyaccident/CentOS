@@ -98,8 +98,23 @@ systemctl enable clamonacc.service
 # Start the clamonacc service
 systemctl start clamonacc.service
 
-# Final install message
-echo 'Clamav Clamav-Update and Clam-On-Access have been installed and enabled. Proceed with manual checks.'
+# Final install messages
+echo '
+Check the Clamav processes with the following command:
+
+ps -ef | grep clam
+
+The result should look similar to the following:
+
+[albert@CentOS ~]$ ps -ef | grep clam
+clamupd+  1498     1  0 17:10 ?        00:00:00 /usr/bin/freshclam -d --foreground=true
+clamscan  1526     1  0 17:11 ?        00:00:00 /usr/sbin/clamd -c /etc/clamd.d/scan.conf
+root      1530     1  0 17:11 ?        00:00:00 /usr/bin/clamonacc -F --log=/var/log/clamonacc --move=/tmp/clamav-quarantine
+clamscan  1578     1 99 17:13 ?        00:00:02 /usr/sbin/clamd -c /etc/clamd.d/scan.conf
+albert    1608  1581  0 17:13 pts/0    00:00:00 grep --color=auto clam
+[albert@CentOS ~]$ 
+'
+echo 'Clamav Clamav-Update and Clam-On-Access have been installed and enabled. Proceed with manual checks as described above.'
 
 # EOF
 
