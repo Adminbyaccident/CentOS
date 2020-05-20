@@ -124,6 +124,7 @@ echo 'Clamav Clamav-Update and Clam-On-Access have been installed and enabled. P
 # EOF
 
 ## References:
+## https://www.adminbyaccident.com/security/how-to-install-the-clamav-antivirus-on-centos-8/
 ## https://www.clamav.net/documents/installing-clamav#rhel
 ## https://www.clamav.net/documents/installation-on-redhat-and-centos-linux-distributions
 ## https://www.clamav.net/documents/usage
