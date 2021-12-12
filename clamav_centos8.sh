@@ -3,7 +3,7 @@
 # chmod +x SCRIPTNAME.sh
 # sudo ./SCRIPTNAME.sh
 #
-# SCRIPT: mysql-install-centos8.sh
+# SCRIPT: clamav_centos8.sh
 # AUTHOR: ALBERT VALBUENA
 # DATE: 20-05-2020
 # SET FOR: Production
